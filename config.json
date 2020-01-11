@@ -1,0 +1,92 @@
+{
+  "name": "Terrible",
+  "version": "0.0.1",
+  "author": "Memory",
+  "repository": "https://github.com/memorypro/gridea-theme-Terrible",
+  "customConfig": [
+    {
+      "name": "header_color",
+      "label": "Header 风格",
+      "group": "外观",
+      "value": "navbar-default",
+      "type": "select",
+      "note": "选择Header风格，暗色或者亮色",
+      "options": [
+        {
+          "label": "简约白",
+          "value": "navbar-default"
+        },
+        {
+          "label": "低调黑",
+          "value": "navbar-inverse"
+        }
+      ]
+    },
+    {
+      "name": "friends",
+      "label": "友链",
+      "group": "友链",
+      "type": "array",
+      "value":[],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "picture-upload", "value": "" },
+        { "label": "描述", "name": "description", "type": "textarea", "value": "" }
+    ] 
+    },
+    {
+      "name": "connects",
+      "label": "社交",
+      "group": "社交",
+      "type": "array",
+      "value":[],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "picture-upload", "value": "" },
+        { "label": "描述", "name": "description", "type": "textarea", "value": "" }
+    ] 
+    },
+    {
+      "name": "VlineAppID",
+      "label": "VlineAppID",
+      "group": "Vline 评论",
+      "value": "",
+      "type": "input",
+      "note": "此处填写VlineAppID"
+    },
+    {
+      "name": "VlineAppKey",
+      "label": "VlineAppKey",
+      "group": "Vline 评论",
+      "value": "",
+      "type": "input",
+      "note": "此处填写VlineAppKey"
+    },
+    {
+      "name": "ga",
+      "label": "谷歌统计 跟踪 ID",
+      "group": "统计",
+      "value": "",
+      "type": "input",
+      "note": "UA-xxxxxxxxx-x"
+    },
+    {
+      "name": "baidutongji",
+      "label": "百度统计JS代码",
+      "group": "统计",
+      "value": "",
+      "type": "textarea",
+      "note": "百度统计JS代码"
+    },
+    {
+      "name": "baidutijiao",
+      "label": "百度SEO主动推送代码",
+      "group": "统计",
+      "value": "",
+      "type": "textarea",
+      "note": "百度统计JS代码"
+    }
+  ]
+}

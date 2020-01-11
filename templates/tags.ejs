@@ -1,0 +1,27 @@
+<html>
+  <head>
+  <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+  </head>
+  <body>
+    <%- include('./includes/header') %>
+    <div class="main">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+          <div class="main-content">
+           
+            <div class="tags-container">
+              <h2>
+                标签
+              </h2> 
+              <% tags.forEach((tag) => { %>
+                <a class="tag" href="<%= tag.link %>"><%= tag.name %></a>
+              <% }); %>
+            </div>
+          </div>
+        </div>
+        <%- include('./includes/sitebar') %>
+      </div><!-- /.blog-main -->
+  </body>
+</html>
+
+

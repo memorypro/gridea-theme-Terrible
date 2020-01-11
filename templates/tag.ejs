@@ -1,0 +1,26 @@
+<html>
+  <head>
+  <%- include('./includes/head', { siteTitle: `${tag.name} | ${themeConfig.siteName}` }) %>
+  </head>
+  <body>
+    <%- include('./includes/header') %>
+    <div class="main">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+          <div class="main-content">
+            <div class="current-tag-container">
+              <h2 class="title">
+                  标签：#<%= tag.name %>
+              </h2> 
+          </div>
+          <%- include('./includes/post-list') %>
+          <%- include('./includes/pagination') %>
+          <%- include('./includes/footer') %>
+          </div>
+        </div>
+        <%- include('./includes/sitebar') %>
+      </div><!-- /.blog-main -->
+  </body>
+</html>
+
+

@@ -1,0 +1,56 @@
+<div class="post-container">
+	<% posts.forEach(function(post) { %>
+	<article class="post">
+		<a href="<%= post.link %>">
+			<h2 class="post-title"><%= post.title %></h2>
+		</a>
+		<div class="post-info">
+			<time class="post-time glyphicon glyphicon-calendar">
+				发布于<%= post.dateFormat %> |
+			</time>
+			<% post.tags.forEach(function(tag) { %>
+			分类于
+			<a href="<%= tag.link %>" class="post-tag 	glyphicon glyphicon-link">
+				<%= tag.name %> |
+			</a>
+			<% }); %>
+			<time class="post-time glyphicon glyphicon-dashboard">
+				<%= post.stats.minutes %>分钟|
+			</time>
+			<time class="post-time glyphicon glyphicon-pencil">
+				<%= post.stats.words %>字数
+			</time>
+		</div>
+		<hr class="me-sidebar-line">
+		<% if (themeConfig.showFeatureImage && post.feature) { %>
+		<a href="<%= post.link %>" class="post-feature-image" style="background-image: url('<%= post.feature %>')">
+		</a>
+		<% } %>
+		
+		<div class="post-abstract" >
+
+			<img src="" class="myClass1" alt="Not Working!" width="220" height="120" style=" border-radius: 5px; margin-right:5px;float: left;" /> 
+			<%- post.description %>
+		</div>
+		
+		<div class="post-button text-left">
+			<a href="<%= post.link %>" rel="contents">
+				More »
+			</a>
+		</div>
+		
+	</article>
+	
+	<% }); %>
+</div>
+
+
+<script>
+	var imgs = document.getElementsByClassName('myClass1');
+	
+	for (var i = 0; i < imgs.length; i++) {
+	  var num = Math.floor(Math.random() * 33 + 1);
+	  imgs[i].src = 'https://img.memory6181.com/random/'+num+'.jpeg';
+	  imgs[i].alt = imgs[i].src;
+	}
+</script>

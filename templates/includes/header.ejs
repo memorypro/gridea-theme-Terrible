@@ -1,0 +1,42 @@
+<!-- 百度推送 -->
+<%-site.customConfig.baidutijiao%>
+
+
+
+<!-- header -->
+<nav class="navbar <%-site.customConfig.header_color%>" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+				<span class="sr-only">切换导航</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/"><%= themeConfig.siteName %></a>
+		</div>
+		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<% menus.forEach(function(menu) { %>
+				<% if (menu.openType === 'External') { %>
+				<li><a href="<%= menu.link %>"><%= menu.name %></a></li>
+				<% } else { %>
+				<li><a href="<%= menu.link %>"><%= menu.name %></a></li>
+				<% } %>
+				<% }); %>
+			</ul>
+			<!-- <div class="navinput hidden-xs"> -->
+				<input type="text" class=" glyphicon glyphicon-search navinput hidden-xs" placeholder="搜索其实很简单">
+			<!-- </div > -->
+		</div>
+		<!-- <form class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+				 
+				 <button type="submit" class="btn btn-default">搜索</button>
+			</div>
+			
+		</form> -->
+	</div>
+</nav>
+
+

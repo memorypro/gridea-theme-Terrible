@@ -1,0 +1,85 @@
+
+<div class=" col-sm-3 blog-sidebar">
+    <div class=" me-sidebar-box sidebar-module ">
+        <div class="glyphicon glyphicon-user me-sidebar-title"> ABOUT</div>
+        <hr class="me-sidebar-line">
+        <img class="me-site-author-image " src="<%= themeConfig.domain %>/images/avatar.png"/>
+        <p class="me-site-name">Memory</p>
+        <p class="me-site-description"><%= themeConfig.siteDescription %></p>
+        <div class="post-button text-left">
+            <a  href="/" rel="contents">
+              More »
+            </a>
+          </div>
+    </div>
+    <div class="me-sidebar-box sidebar-module">
+        <p class="me-sidebar-title glyphicon glyphicon-list-alt"> CATEGORY</p>
+        <hr class="me-sidebar-line">
+        <div >
+            <ul  >
+              <% site.tags.forEach(function(tag) { %>
+                <li class="me-sidebar-list" >
+                  <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-book" href="<%= tag.link %>">
+                    <%=tag.name %>
+                  </a>
+                </li>
+        
+              <% }); %>
+            </ul>
+             
+          </div>
+    </div>
+    <div class="me-sidebar-box sidebar-module">
+        <p class="me-sidebar-title glyphicon glyphicon-tree-conifer"> FRIENDS</p>
+        <hr class="me-sidebar-line">
+        <div >
+            <ul >
+              <% site.customConfig.friends.forEach(function(friend) { %>
+                <li  class="me-sidebar-list" >
+                  <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-globe" href="<%= friend.siteLink %>">
+                    <%=friend.siteName %>
+                  </a>
+                </li>
+        
+              <% }); %>
+            </ul>
+             
+          </div>
+    </div>
+    <div class="me-sidebar-box sidebar-module">
+        <p class="me-sidebar-title glyphicon glyphicon-send"> CONTACT</p>
+        <hr class="me-sidebar-line">
+        <div >
+            <ul >
+              <ul >
+                <% site.customConfig.connects.forEach(function(connect) { %>
+                  <li  class="me-sidebar-list" >
+                    <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-leaf" href="<%= connect.siteLink %>">
+                      <%=connect.siteName %>
+                    </a>
+                  </li>
+          
+                <% }); %>
+              </ul>
+
+                <!-- <li class="me-sidebar-list" >
+                    <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-leaf" href="https://github.com/memorypro">
+                      GitHub
+                    </a>
+                </li>
+                <li class="me-sidebar-list" >
+                    <a class="me-sidebar-list-a glyphicon 	glyphicon glyphicon-leaf" href="http://www.cnblogs.com/memorypro/">
+                      博客园
+                    </a>
+                </li>
+                <li class="me-sidebar-list" >
+                    <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-leaf" href="https://gitee.com/zyzp">
+                      码云
+                    </a>
+                </li> -->
+            </ul>
+             
+          </div>
+    </div>
+</div><!-- /.blog-sidebar -->
+

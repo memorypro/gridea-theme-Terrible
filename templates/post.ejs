@@ -1,0 +1,126 @@
+<html>
+
+<head>
+	<%- include('./includes/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+</head>
+
+<body>
+	<%- include('./includes/header') %>
+	<div class="main">
+		<div class="row">
+			<div class="col-sm-8 blog-main">
+				<div class="main-content">
+					<div class="post-detail">
+						<article class="post">
+							<h2 class="post-title">
+								<%= post.title %>
+							</h2>
+							<div class="post-info">
+								<time class="post-time glyphicon glyphicon-calendar">
+									发布于<%= post.dateFormat %> |
+								</time>
+								<% post.tags.forEach(function(tag) { %>
+								分类于
+								<a href="<%= tag.link %>" class="post-tag 	glyphicon glyphicon-link">
+									<%= tag.name %> |
+								</a>
+								<% }); %>
+								<time class="post-time glyphicon glyphicon-dashboard">
+									<%= post.stats.minutes %>分钟|
+								</time>
+								<time class="post-time glyphicon glyphicon-pencil">
+									<%= post.stats.words %>字数
+								</time>
+							</div>
+							<hr class="me-sidebar-line"> <!-- 分割线 -->
+							<% if (themeConfig.showFeatureImage && post.feature) { %>
+							<div class="post-feature-image" style="background-image: url('<%= post.feature %>')">
+							</div>
+							<% } %>
+							<div class="post-content">
+								<!-- <img src="" class="myClass1" alt="Not Working!"  height="200" style=" border-radius: 5px; " />  -->
+								<%- post.content %>
+							</div>
+							<ul class="post-copyright">
+								<li class="post-copyright-list">
+									<strong>本文作者：</strong>
+									Memory
+								</li>
+								<li class="post-copyright-list">
+									<strong>本文链接：</strong>
+									<a href="<%- post.link %>" title="<%- post.link %>"><%- post.link %></a>
+								</li>
+								<li class="post-copyright-list">
+									<strong>版权声明： </strong>
+									本博客所有文章除特别声明外，转载请注明出处！
+								</li>
+							</ul>
+							<div class="comment"></div>
+						</article>
+
+					</div>
+
+					<% if (post.nextPost && !post.hideInList) { %>
+					<div class="next-post">
+						<div class="next">下一篇</div>
+						<a href="<%= post.nextPost.link %>">
+							<h3 class="post-title">
+								<%= post.nextPost.title %>
+							</h3>
+						</a>
+					</div>
+					<% } %>
+
+					<% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+					<% if (commentSetting.commentPlatform === 'gitalk') { %>
+					<%- include('./includes/gitalk') %>
+					<% } %>
+
+					<% if (commentSetting.commentPlatform === 'disqus') { %>
+					<%- include('./includes/disqus') %>
+					<% } %>
+					<% } %>
+
+					<%- include('./includes/footer') %>
+				</div>
+			</div><!-- /.blog-main -->
+			<%- include('./includes/sitebar') %>
+
+		</div>
+	</div>
+
+	<!--载入js，在</body>之前插入即可-->
+	<!--Leancloud 操作库:-->
+	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+	<!--Valine 的核心代码库-->
+	<script src="/media/scripts/Valine.min.js"></script>
+	<script>
+
+		var uid = '<%=site.customConfig.VlineAppID%>'
+		var ukey = '<%=site.customConfig.VlineAppKey%>'
+		new Valine({
+			// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+			av: AV,
+			el: '.comment',
+			lang: 'zh-cn',//设置评论语言
+			emoticon_url: 'https://cloud.panjunwen.com/alu',
+			emoticon_list: ["狂汗.png", "不说话.png", "汗.png", "坐等.png", "献花.png", "不高兴.png", "中刀.png", "害羞.png", "皱眉.png",
+				"小眼睛.png",
+				"暗地观察.png"],
+			app_id: uid,
+			app_key: ukey,
+			placeholder: '评论留言'
+		});
+	</script>
+	<!-- <script>
+		var imgs = document.getElementsByClassName('myClass1');
+		
+		for (var i = 0; i < imgs.length; i++) {
+		  var num = Math.floor(Math.random() * 33 + 1);
+		  imgs[i].src = 'https://img.memory6181.com/random/'+num+'.jpeg';
+		  imgs[i].alt = imgs[i].src;
+		}
+	</script> -->
+</body>
+
+</html>
