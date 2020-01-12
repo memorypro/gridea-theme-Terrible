@@ -3,14 +3,16 @@
 <div class="archives-container">
   <% years.forEach(function(year) { %>
     <h2 class="year"><%- year %></h2>
+    <hr class="me-sidebar-line"> <!-- 分割线 -->
     <% posts.forEach(function(post) { %>
       <%if (post.date.indexOf(year) !== -1) { %>
         <article class="post">
           <a href="<%= post.link %>">
             <h2 class="post-title">
-              <small><%= post.dateFormat %></small>
               <%= post.title %>
               
+              <small style="float: right;" class="glyphicon glyphicon-calendar"><%= post.dateFormat %></small>
+              <hr class="me-sidebar-line"> <!-- 分割线 -->
             </h2>
           </a>
         </article>

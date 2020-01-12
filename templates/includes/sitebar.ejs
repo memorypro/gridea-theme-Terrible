@@ -1,19 +1,19 @@
 
 <div class=" col-sm-3 blog-sidebar">
     <div class=" me-sidebar-box sidebar-module ">
-        <div class="glyphicon glyphicon-user me-sidebar-title"> ABOUT</div>
+        <div class="glyphicon glyphicon-user me-sidebar-title"> 关于我</div>
         <hr class="me-sidebar-line">
         <img class="me-site-author-image " src="<%= themeConfig.domain %>/images/avatar.png"/>
         <p class="me-site-name">Memory</p>
         <p class="me-site-description"><%= themeConfig.siteDescription %></p>
         <div class="post-button text-left">
             <a  href="/" rel="contents">
-              More »
+              阅读全文 »
             </a>
           </div>
     </div>
     <div class="me-sidebar-box sidebar-module">
-        <p class="me-sidebar-title glyphicon glyphicon-list-alt"> CATEGORY</p>
+        <p class="me-sidebar-title glyphicon glyphicon-list-alt"> 文章分类</p>
         <hr class="me-sidebar-line">
         <div >
             <ul  >
@@ -30,7 +30,7 @@
           </div>
     </div>
     <div class="me-sidebar-box sidebar-module">
-        <p class="me-sidebar-title glyphicon glyphicon-tree-conifer"> FRIENDS</p>
+        <p class="me-sidebar-title glyphicon glyphicon-tree-conifer"> 友情链接</p>
         <hr class="me-sidebar-line">
         <div >
             <ul >
@@ -42,12 +42,16 @@
                 </li>
         
               <% }); %>
+              <li  class="me-sidebar-list" >
+                <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-globe" href="/">
+                  更多
+                </a>
+              </li>
             </ul>
-             
           </div>
     </div>
     <div class="me-sidebar-box sidebar-module">
-        <p class="me-sidebar-title glyphicon glyphicon-send"> CONTACT</p>
+        <p class="me-sidebar-title glyphicon glyphicon-send"> 社交</p>
         <hr class="me-sidebar-line">
         <div >
             <ul >
