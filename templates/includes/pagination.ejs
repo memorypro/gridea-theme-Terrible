@@ -1,8 +1,12 @@
 <div class="pagination-container">
   <% if (pagination.prev) { %>
     <a href="<%= pagination.prev %>" class="prev-page glyphicon glyphicon-circle-arrow-left">上一页</a>
-  <% } %>
+    <% }else{ %>
+      <a class="prev-page glyphicon glyphicon-circle-arrow-left">前面啥也没有</a>
+    <% } %>
   <% if (pagination.next) { %>
     <a href="<%= pagination.next %>" class="next-page 	glyphicon glyphicon-circle-arrow-right">下一页</a>
+  <% }else{ %>
+    <a class="next-page 	glyphicon glyphicon-circle-arrow-right">后面没有了</a>
   <% } %>
 </div>
