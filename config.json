@@ -8,17 +8,25 @@
       "name": "header_color",
       "label": "Header 风格",
       "group": "外观",
-      "value": "navbar-default",
+      "value": "me-header-color-style-white",
       "type": "select",
       "note": "选择Header风格，暗色或者亮色",
       "options": [
         {
           "label": "简约白",
-          "value": "navbar-default"
+          "value": "me-header-color-style-white"
         },
         {
           "label": "低调黑",
-          "value": "navbar-inverse"
+          "value": "me-header-color-style-dark"
+        }, 
+        {
+          "label": "清新绿",
+          "value": "me-header-color-style-green"
+        },
+        {
+          "label": "淡雅粉",
+          "value": "me-header-color-style-pink"
         }
       ]
     },
