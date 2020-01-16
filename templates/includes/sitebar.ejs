@@ -1,25 +1,25 @@
-
+<div class=" <%-site.customConfig.header_color%>">
 <div class=" col-sm-3 blog-sidebar">
     <div class=" me-sidebar-box sidebar-module ">
-        <div class="glyphicon glyphicon-user me-sidebar-title"> 关于我</div>
+        <div class="glyphicon glyphicon-user me-sidebar-title post-text"> 关于我</div>
         <hr class="me-sidebar-line">
         <img class="me-site-author-image " src="<%= themeConfig.domain %>/images/avatar.png"/>
         <p class="me-site-name">Memory</p>
         <p class="me-site-description"><%= themeConfig.siteDescription %></p>
         <div class="post-button text-left">
-            <a  href="/" rel="contents">
-              了解更多 »
+            <a  href="/" rel="contents" style="text-decoration: none">
+              <span class="post-link">了解更多 »</span>
             </a>
           </div>
     </div>
     <div class="me-sidebar-box sidebar-module">
-        <p class="me-sidebar-title glyphicon glyphicon-list-alt"> 文章分类</p>
+        <p class="me-sidebar-title glyphicon glyphicon-list-alt post-text"> 文章分类</p>
         <hr class="me-sidebar-line">
         <div >
             <ul  >
               <% site.tags.forEach(function(tag) { %>
                 <li class="me-sidebar-list" >
-                  <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-book" href="<%= tag.link %>">
+                  <a class="post-link me-sidebar-list-a glyphicon glyphicon glyphicon-book" href="<%= tag.link %>" style="text-decoration: none">
                     <%=tag.name %>
                   </a>
                 </li>
@@ -30,20 +30,20 @@
           </div>
     </div>
     <div class="me-sidebar-box sidebar-module">
-        <p class="me-sidebar-title glyphicon glyphicon-tree-conifer"> 友情链接</p>
+        <p class="me-sidebar-title glyphicon glyphicon-tree-conifer post-text"> 友情链接</p>
         <hr class="me-sidebar-line">
         <div >
             <ul >
               <% site.customConfig.friends.forEach(function(friend) { %>
                 <li  class="me-sidebar-list" >
-                  <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-globe" href="<%= friend.siteLink %>">
+                  <a class="post-link me-sidebar-list-a glyphicon glyphicon glyphicon-globe" href="<%= friend.siteLink %>" style="text-decoration: none">
                     <%=friend.siteName %>
                   </a>
                 </li>
         
               <% }); %>
               <li  class="me-sidebar-list" >
-                <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-globe" href="/">
+                <a class=" post-link me-sidebar-list-a glyphicon glyphicon glyphicon-globe" href="/" style="text-decoration: none">
                   更多
                 </a>
               </li>
@@ -51,39 +51,24 @@
           </div>
     </div>
     <div class="me-sidebar-box sidebar-module">
-        <p class="me-sidebar-title glyphicon glyphicon-send"> 社交</p>
+        <p class="me-sidebar-title glyphicon glyphicon-send post-text"> 社交</p>
         <hr class="me-sidebar-line">
         <div >
             <ul >
               <ul >
                 <% site.customConfig.connects.forEach(function(connect) { %>
                   <li  class="me-sidebar-list" >
-                    <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-leaf" href="<%= connect.siteLink %>">
+                    <a class="post-link me-sidebar-list-a glyphicon glyphicon glyphicon-leaf" href="<%= connect.siteLink %>" style="text-decoration: none">
                       <%=connect.siteName %>
                     </a>
                   </li>
           
                 <% }); %>
               </ul>
-
-                <!-- <li class="me-sidebar-list" >
-                    <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-leaf" href="https://github.com/memorypro">
-                      GitHub
-                    </a>
-                </li>
-                <li class="me-sidebar-list" >
-                    <a class="me-sidebar-list-a glyphicon 	glyphicon glyphicon-leaf" href="http://www.cnblogs.com/memorypro/">
-                      博客园
-                    </a>
-                </li>
-                <li class="me-sidebar-list" >
-                    <a class="me-sidebar-list-a glyphicon glyphicon glyphicon-leaf" href="https://gitee.com/zyzp">
-                      码云
-                    </a>
-                </li> -->
             </ul>
              
           </div>
     </div>
-</div><!-- /.blog-sidebar -->
-
+  </div><!-- /.blog-sidebar -->
+</div>
+    

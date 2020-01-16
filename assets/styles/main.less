@@ -23,15 +23,20 @@ body {
   color: #333;
    background: #EEEEEE;
   letter-spacing: 1.0382;
+
 }
 a {
   color: #333;
   text-decoration: none;
   transition: all 0.3s;
 
-  &:hover {
-    color: @main-color;
-  }
+   &:hover {
+     color: @main-color;
+   }
+   &:focus{
+    text-decoration: none;
+   }
+
 }
 
 body, div, a, p, ul, li, ol, h1, h2, h3, h4, h5, h6, table, tr, td {

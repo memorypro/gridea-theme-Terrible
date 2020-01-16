@@ -27,6 +27,10 @@
         {
           "label": "淡雅粉",
           "value": "me-header-color-style-pink"
+        },
+        {
+          "label": "休闲蓝",
+          "value": "me-header-color-style-blue"
         }
       ]
     },
